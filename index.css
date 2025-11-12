@@ -1,0 +1,60 @@
+*{margin: 0;
+    padding: 0;
+
+}
+h1{
+    margin: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: beige;
+}
+
+body{
+    background-color: rgb(78, 105, 105);
+}
+
+#Raiz{
+    color: beige;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 40%;
+    margin-block-end: 1%;
+}
+
+#Residuo{
+    color: beige;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 40%;
+    margin-block-end: 1%;
+}
+
+#resultado{
+    color: beige;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-left: 40%;
+    margin-block-end: 1%;
+}
+
+#numero{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-block-end: 1%;
+    margin-left: 40%;
+    margin-block-end: 1%;
+}
+
+#Factores-primos{
+    color: beige;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-left: 40%;
+}
+
+button{
+    
+    color: rgb(0, 0, 0);
+    background-color: beige;
+   
+}
