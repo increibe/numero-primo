@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="diseno.css">
+    <title>Numero Primo</title>
+</head>
+<body>
+    <h1>Numero Primo o Compuesto</h1>
+
+    <input type="number" id="numero" placeholder="Escribe un número">
+  <button onclick="verificarPrimo()">Calcular</button>
+
+  <p id="resultado"></p>
+  <p id="Raiz"></p>
+  <p id= "Residuo"></p>
+  <p id= "Factores-primos"></p>
+
+  <script>
+    function verificarPrimo() {
+      let n = parseInt(document.getElementById("numero").value);
+      let esPrimo = true;
+
+      if (n <= 1) {
+        esPrimo = false;
+      } else {
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+          if (n % i === 0) {
+            esPrimo = false;
+            break;
+          }
+        }
+      }
+
+      let resultado = document.getElementById("resultado");
+      if (esPrimo) {
+        resultado.textContent = n + " es un número primo.";
+      } else {
+        resultado.textContent = n + " no es un número primo.";
+      }
+        let raiz = Math.sqrt(n);
+        let raizExacta = Math.floor(raiz);
+        let raizFinal = document.getElementById("Raiz").textContent = "Raiz: " + raizExacta;
+
+        let modulo = n % raizExacta;
+        let residuoFinal = document.getElementById("Residuo").textContent = "Residuo de la raiz: " + modulo;
+
+        let numerosF = [];
+        
+        for (let i = 2; i<=Math.sqrt(n); i++) {
+            let esPrimo = false;
+            if(n % i === 0){
+                esPrimo = true;
+                for(let j = 2; j<=Math.sqrt(i); j++){
+                    if(i % j === 0){
+                        esPrimo = false;
+                        break;
+                    }
+                }
+            }
+            if (esPrimo == true){
+                numerosF.push(i);
+            }
+        }
+        if(numerosF.length === 0){
+            let factoresPrimos = document.getElementById("Factores-primos").textContent = "cofactores primos: no tiene ";
+        }else{
+        let factoresPrimos = document.getElementById("Factores-primos").textContent = "cofactores primos: " + numerosF.join(", ");
+        }
+    }
+        
+  </script>
+
+</body>
+</html>
